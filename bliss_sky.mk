@@ -17,6 +17,8 @@ $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 $(call inherit-product, vendor/bliss/config/BoardConfigReservedSize.mk)
 
+$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 

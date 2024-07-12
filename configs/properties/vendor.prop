@@ -316,6 +316,12 @@ vendor.usb.use_gadget_hal=0
 sys.usb.mtp.batchcancel=1
 
 # Vibrator
+vendor.qcom.vibrator.led.effect.click=12
+vendor.qcom.vibrator.led.effect.doubleclick=18
+vendor.qcom.vibrator.led.effect.tick=7
+vendor.qcom.vibrator.led.effect.thud=9
+vendor.qcom.vibrator.led.effect.pop=8
+vendor.qcom.vibrator.led.effect.heavyclick=15
 vendor.qcom.vibrator.led.enable_effects=1
 vendor.qcom.vibrator.led.mv_max=3544
 vendor.qcom.vibrator.led.mv_min=1504

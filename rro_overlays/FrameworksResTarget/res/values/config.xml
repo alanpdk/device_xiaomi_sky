@@ -118,30 +118,13 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-    <!-- Vibrator pattern for feedback about a long screen/key press -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>50</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
-        <item>40</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback that simulates a double click effect -->
-    <integer-array name="config_doubleClickVibePattern">
-        <item>0</item>
-        <item>50</item>
-        <item>100</item>
-        <item>50</item>
-    </integer-array>
-
     <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
     <bool name="config_dozePulsePickup">true</bool>
 
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">false</bool>
+
+    <!--Useful if you want to improve signal reception -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
 </resources>
