@@ -488,6 +488,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
+    hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/bliss/interfaces/power-libperfmgr \
+    hardware/google \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/google/pixel/power-libperfmgr/libperfmgr \
     hardware/xiaomi
 
 # Telephony
