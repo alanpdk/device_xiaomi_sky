@@ -23,7 +23,7 @@ static const variant_info_t sky_poco_info = {
     .device = "sky",
     .marketname = "POCO M6 Pro 5G",
     .model = "23076PC4BI",
-    .mod_device = "sky_global",
+    .mod_device = "sky_in_global",
     .build_fingerprint = FINGERPRINT_POCO_IN,
 };
 

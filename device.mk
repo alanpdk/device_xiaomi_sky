@@ -8,9 +8,10 @@ DEVICE_PATH := device/xiaomi/sky
 
 # Inherit virtual_ab_ota_product.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Call the proprietary setup.
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
@@ -134,6 +135,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7.vendor \
     libcamera_metadata.vendor \
     libexif.vendor \
+    libpiex.vendor \
     libutilscallstack.vendor \
     libyuv.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
