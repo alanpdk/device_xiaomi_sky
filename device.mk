@@ -79,6 +79,9 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.parrot
 
 PRODUCT_PACKAGES += \
+    audioadsprpcd
+
+PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
