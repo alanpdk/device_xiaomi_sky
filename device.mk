@@ -86,6 +86,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndcardparser \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
