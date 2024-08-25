@@ -24,7 +24,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
-$(call inherit-product, vendor/miuicamera/config.mk)
+#$(call inherit-product, vendor/miuicamera/config.mk)
 
 BLISS_BUILDTYPE := OFFICIAL
 
