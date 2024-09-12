@@ -24,7 +24,9 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
-#$(call inherit-product, vendor/miuicamera/config.mk)
+
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-sky/device.mk)
 
 BLISS_BUILDTYPE := OFFICIAL
 
@@ -34,6 +36,11 @@ PRODUCT_NAME := bliss_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
+
+PRODUCT_SYSTEM_NAME := sky_p_in
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

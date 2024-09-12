@@ -7,6 +7,9 @@
 # Inherit from the proprietary version
 -include vendor/xiaomi/sky/BoardConfigVendor.mk
 
+# Inherit from proprietary files for miuicamera
+-include device/xiaomi/miuicamera-sky/BoardConfig.mk
+
 DEVICE_PATH := device/xiaomi/sky
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
