@@ -7,14 +7,8 @@
 # Inherit from the proprietary version
 -include vendor/xiaomi/sky/BoardConfigVendor.mk
 
-# Inherit from proprietary files for miuicamera
--include device/xiaomi/miuicamera-sky/BoardConfig.mk
-
 DEVICE_PATH := device/xiaomi/sky
 KERNEL_PATH := $(DEVICE_PATH)-kernel
-
-BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 104857600
-
 
 # A/B
 AB_OTA_UPDATER := true
@@ -24,6 +18,7 @@ AB_OTA_PARTITIONS += \
     dtbo \
     odm \
     product \
+	recovery \
     system \
     system_ext \
     vbmeta \
@@ -112,8 +107,8 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    swinfo.fingerprint=$(BLISS_VERSION) \
-    mtdoops.fingerprint=$(BLISS_VERSION)
+    swinfo.fingerprint=$(DERP_VERSION) \
+    mtdoops.fingerprint=$(DERP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -181,6 +176,11 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6975127552
 
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 268435456
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 104857600
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 104857600
+BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 104857600
+
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -227,7 +227,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_SCREEN_DENSITY := 440
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2024-06-01
+VENDOR_SECURITY_PATCH := 2024-08-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -271,7 +271,7 @@ DEVICE_MANIFEST_RAVELIN_FILES := \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/bliss/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
 ODM_MANIFEST_SKUS += hceese hcesim hcesim1 hcesim1ese hcesimese
 ODM_MANIFEST_HCEESE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hceese.xml
 ODM_MANIFEST_HCESIM_FILES := $(DEVICE_PATH)/configs/vintf/manifest_hcesim.xml

@@ -363,7 +363,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay-derp
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -480,7 +480,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/bliss/interfaces/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/google \
     hardware/google/interfaces \
     hardware/google/pixel \
@@ -600,5 +600,9 @@ PRODUCT_PACKAGES += \
     libnl \
     libpng.vendor \
     libwfdaac_vendor
-
+	
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+	
 
