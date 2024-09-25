@@ -613,8 +613,8 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl:64 \
-    libpng.vendor \
-    libwfdaac_vendor
+    libpng.vendor:64
+	
 	
 # Remove packages
 PRODUCT_PACKAGES += \
