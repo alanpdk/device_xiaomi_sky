@@ -741,7 +741,8 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ssgqmigd /vendor/bin/ssgqmigd
+service ssgqmigd /vendor/bin/ssgqmigd64
+    override
     class late_start
     user radio
     group radio gps system
@@ -919,7 +920,7 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     user system
     group nfc
 
-on property:init.svc.vendor.charger=running
+on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
