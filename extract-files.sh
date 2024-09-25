@@ -139,6 +139,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "setsockopt: 1" "${2}" || echo "setsockopt: 1" >> "${2}"
             ;;
+		vendor/bin/vendor.dpmd)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v33.so" "${2}"
+            ;;
     esac
 }
 

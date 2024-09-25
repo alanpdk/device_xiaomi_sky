@@ -615,9 +615,14 @@ PRODUCT_PACKAGES += \
     libnl:64 \
     libpng.vendor:64
 	
+# Libpiex
+PRODUCT_PACKAGES += \
+    libpiex.vendor
+
+#libhidl	
+PRODUCT_PACKAGES += \
+    libhidlbase-v33
 	
 # Remove packages
 PRODUCT_PACKAGES += \
     RemovePackages
-	
-
