@@ -159,6 +159,12 @@ PRODUCT_PROPERTY_OVERRIDES  += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 	
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.xiaomiparts.rc
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.lcd.cabc_mode=1
+	
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
